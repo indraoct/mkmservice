@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions name="Service"
+ targetNamespace="http://localhost:80/Service.wsdl"
+ xmlns:tns="http://localhost:80/Service.wsdl"
+ xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+ xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+ xmlns:BOSS="http://tempuri.org/BOSS.xsd"
+ xmlns:SOAP="http://schemas.xmlsoap.org/wsdl/soap/"
+ xmlns:MIME="http://schemas.xmlsoap.org/wsdl/mime/"
+ xmlns:DIME="http://schemas.xmlsoap.org/ws/2002/04/dime/wsdl/"
+ xmlns:WSDL="http://schemas.xmlsoap.org/wsdl/"
+ xmlns="http://schemas.xmlsoap.org/wsdl/">
+
+<types>
+
+ <schema targetNamespace="http://tempuri.org/BOSS.xsd"
+  xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"
+  xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+  xmlns:BOSS="http://tempuri.org/BOSS.xsd"
+  xmlns="http://www.w3.org/2001/XMLSchema"
+  elementFormDefault="unqualified"
+  attributeFormDefault="unqualified">
+  <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+  <complexType name="ProductList">
+   <sequence>
+     <element name="ProductID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="ArrayOfProduct">
+   <sequence>
+     <element name="ProductListItem" type="BOSS:ProductList" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="ChangeList">
+   <sequence>
+     <element name="ProductID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Operation" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   </sequence>
+  </complexType>
+  <complexType name="ArrayOfChange">
+   <sequence>
+     <element name="ChangeListItem" type="BOSS:ChangeList" minOccurs="0" maxOccurs="unbounded" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="SubscriptionReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Login_name" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Password" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Citycode" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Productlist" type="BOSS:ArrayOfProduct" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="UsergroupID" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+     <element name="TerminalType" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+     <element name="Fatherloginname" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="UnsubscriptionReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="SuspensionReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="ReactivationReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="ChangeProductsReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Productlist" type="BOSS:ArrayOfChange" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="BindSTBReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="UnbingSTBReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <complexType name="ChangeGroupReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="UsergroupID" type="xsd:int" minOccurs="1" maxOccurs="1"/>
+   </sequence>
+  </complexType>
+  <complexType name="ResetpasswordReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Password" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+    <complexType name="QuerySTBidReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Password" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+   </sequence>
+  </complexType>
+  <complexType name="QueryOrderProductReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Password" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+    <complexType name="QueryUserStateReq">
+   <sequence>
+     <element name="UserID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+   </sequence>
+  </complexType>
+  <!-- operation request element -->
+  <element name="Subscription">
+   <complexType>
+    <sequence>
+     <element name="reqSubscription" type="BOSS:SubscriptionReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SubscriptionRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="Unsubscription">
+   <complexType>
+    <sequence>
+     <element name="reqUnsubscription" type="BOSS:UnsubscriptionReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="UnsubscriptionRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="Suspension">
+   <complexType>
+    <sequence>
+     <element name="reqSuspension" type="BOSS:SuspensionReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="SuspensionRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="Reactivation">
+   <complexType>
+    <sequence>
+     <element name="reqResumeuser" type="BOSS:ReactivationReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ReactivationRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ChangeProducts">
+   <complexType>
+    <sequence>
+     <element name="reqChangeProducts" type="BOSS:ChangeProductsReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChangeProductsRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="BindSTB">
+   <complexType>
+    <sequence>
+     <element name="reqBindSTB" type="BOSS:BindSTBReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="BindSTBRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="UnbindSTB">
+   <complexType>
+    <sequence>
+     <element name="reqUnbindSTB" type="BOSS:UnbingSTBReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="UnbingSTBRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ChangeGroup">
+   <complexType>
+    <sequence>
+     <element name="reqChangeGroup" type="BOSS:ChangeGroupReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ChangeGroupRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation request element -->
+  <element name="ResetPassword">
+   <complexType>
+    <sequence>
+     <element name="reqResetpassword" type="BOSS:ResetpasswordReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="ResetpasswordRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+   <!-- operation request element -->
+  <element name="QuerySTBid">
+   <complexType>
+    <sequence>
+     <element name="reqQuerySTBid" type="BOSS:QuerySTBidReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="QuerySTBidRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+	 <element name="STBID" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+   <!-- operation request element -->
+  <element name="QueryOrderProduct">
+   <complexType>
+    <sequence>
+     <element name="reqQueryOrderProduct" type="BOSS:QueryOrderProductReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="QueryOrderProductRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+	 <element name="Productlist" type="BOSS:ArrayOfProduct" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+   <!-- operation request element -->
+  <element name="QueryUserState">
+   <complexType>
+    <sequence>
+     <element name="reqQueryUserState" type="BOSS:QueryUserStateReq" minOccurs="0" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+  <!-- operation response element -->
+  <element name="QueryUserStateRsp">
+   <complexType>
+    <sequence>
+     <element name="Result" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+     <element name="Errordesc" type="xsd:string" minOccurs="0" maxOccurs="1" nillable="true"/>
+	  <element name="Status" type="xsd:int" minOccurs="1" maxOccurs="1" nillable="true"/>
+    </sequence>
+   </complexType>
+  </element>
+ </schema>
+
+</types>
+
+<message name="Subscription">
+ <part name="parameters" element="BOSS:Subscription"/>
+</message>
+
+<message name="SubscriptionRsp">
+ <part name="parameters" element="BOSS:SubscriptionRsp"/>
+</message>
+
+<message name="Unsubscription">
+ <part name="parameters" element="BOSS:Unsubscription"/>
+</message>
+
+<message name="UnsubscriptionRsp">
+ <part name="parameters" element="BOSS:UnsubscriptionRsp"/>
+</message>
+
+<message name="Suspension">
+ <part name="parameters" element="BOSS:Suspension"/>
+</message>
+
+<message name="SuspensionRsp">
+ <part name="parameters" element="BOSS:SuspensionRsp"/>
+</message>
+
+<message name="Reactivation">
+ <part name="parameters" element="BOSS:Reactivation"/>
+</message>
+
+<message name="ReactivationRsp">
+ <part name="parameters" element="BOSS:ReactivationRsp"/>
+</message>
+
+<message name="ChangeProducts">
+ <part name="parameters" element="BOSS:ChangeProducts"/>
+</message>
+
+<message name="ChangeProductsRsp">
+ <part name="parameters" element="BOSS:ChangeProductsRsp"/>
+</message>
+
+<message name="BindSTB">
+ <part name="parameters" element="BOSS:BindSTB"/>
+</message>
+
+<message name="BindSTBRsp">
+ <part name="parameters" element="BOSS:BindSTBRsp"/>
+</message>
+
+<message name="UnbindSTB">
+ <part name="parameters" element="BOSS:UnbindSTB"/>
+</message>
+
+<message name="UnbingSTBRsp">
+ <part name="parameters" element="BOSS:UnbingSTBRsp"/>
+</message>
+
+<message name="ChangeGroup">
+ <part name="parameters" element="BOSS:ChangeGroup"/>
+</message>
+
+<message name="ChangeGroupRsp">
+ <part name="parameters" element="BOSS:ChangeGroupRsp"/>
+</message>
+
+<message name="ResetPassword">
+ <part name="parameters" element="BOSS:ResetPassword"/>
+</message>
+
+<message name="ResetpasswordRsp">
+ <part name="parameters" element="BOSS:ResetpasswordRsp"/>
+</message>
+
+<message name="QuerySTBid">
+ <part name="parameters" element="BOSS:QuerySTBid"/>
+</message>
+
+<message name="QuerySTBidRsp">
+ <part name="parameters" element="BOSS:QuerySTBidRsp"/>
+</message>
+
+<message name="QueryOrderProduct">
+ <part name="parameters" element="BOSS:QueryOrderProduct"/>
+</message>
+
+<message name="QueryOrderProductRsp">
+ <part name="parameters" element="BOSS:QueryOrderProductRsp"/>
+</message>
+
+<message name="QueryUserState">
+ <part name="parameters" element="BOSS:QueryUserState"/>
+</message>
+
+<message name="QueryUserStateRsp">
+ <part name="parameters" element="BOSS:QueryUserStateRsp"/>
+</message>
+
+<portType name="ServicePortType">
+ <operation name="Subscription">
+  <documentation>Service definition of function BOSS__Subscription</documentation>
+  <input message="tns:Subscription"/>
+  <output message="tns:SubscriptionRsp"/>
+ </operation>
+ <operation name="Unsubscription">
+  <documentation>Service definition of function BOSS__Unsubscription</documentation>
+  <input message="tns:Unsubscription"/>
+  <output message="tns:UnsubscriptionRsp"/>
+ </operation>
+ <operation name="Suspension">
+  <documentation>Service definition of function BOSS__Suspension</documentation>
+  <input message="tns:Suspension"/>
+  <output message="tns:SuspensionRsp"/>
+ </operation>
+ <operation name="Reactivation">
+  <documentation>Service definition of function BOSS__Reactivation</documentation>
+  <input message="tns:Reactivation"/>
+  <output message="tns:ReactivationRsp"/>
+ </operation>
+ <operation name="ChangeProducts">
+  <documentation>Service definition of function BOSS__ChangeProducts</documentation>
+  <input message="tns:ChangeProducts"/>
+  <output message="tns:ChangeProductsRsp"/>
+ </operation>
+ <operation name="BindSTB">
+  <documentation>Service definition of function BOSS__BindSTB</documentation>
+  <input message="tns:BindSTB"/>
+  <output message="tns:BindSTBRsp"/>
+ </operation>
+ <operation name="UnbindSTB">
+  <documentation>Service definition of function BOSS__UnbindSTB</documentation>
+  <input message="tns:UnbindSTB"/>
+  <output message="tns:UnbingSTBRsp"/>
+ </operation>
+ <operation name="ChangeGroup">
+  <documentation>Service definition of function BOSS__ChangeGroup</documentation>
+  <input message="tns:ChangeGroup"/>
+  <output message="tns:ChangeGroupRsp"/>
+ </operation>
+ <operation name="ResetPassword">
+  <documentation>Service definition of function BOSS__ResetPassword</documentation>
+  <input message="tns:ResetPassword"/>
+  <output message="tns:ResetpasswordRsp"/>
+ </operation>
+ <operation name="QuerySTBid">
+  <documentation>Service definition of function BOSS__QuerySTBid</documentation>
+  <input message="tns:QuerySTBid"/>
+  <output message="tns:QuerySTBidRsp"/>
+ </operation>
+ <operation name="QueryOrderProduct">
+  <documentation>Service definition of function BOSS__QueryOrderProduct</documentation>
+  <input message="tns:QueryOrderProduct"/>
+  <output message="tns:QueryOrderProductRsp"/>
+ </operation>
+ <operation name="QueryUserState">
+  <documentation>Service definition of function BOSS__QueryUserState</documentation>
+  <input message="tns:QueryUserState"/>
+  <output message="tns:QueryUserStateRsp"/>
+ </operation>
+</portType>
+
+<binding name="Service" type="tns:ServicePortType">
+ <SOAP:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+ <operation name="Subscription">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="Unsubscription">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="Suspension">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="Reactivation">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ChangeProducts">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="BindSTB">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="UnbindSTB">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ChangeGroup">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+ <operation name="ResetPassword">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+  <operation name="QuerySTBid">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+  <operation name="QueryOrderProduct">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+  <operation name="QueryUserState">
+  <SOAP:operation soapAction=""/>
+  <input>
+     <SOAP:body parts="parameters" use="literal"/>
+  </input>
+  <output>
+     <SOAP:body parts="parameters" use="literal"/>
+  </output>
+ </operation>
+</binding>
+
+<service name="Service">
+ <documentation>gSOAP 2.7.6d generated service definition</documentation>
+ <port name="Service" binding="tns:Service">
+  <!--<SOAP:address location="http://localhost:80"/>-->
+  <SOAP:address location="http://172.16.160.140:9346"/>
+ </port>
+</service>
+
+</definitions>

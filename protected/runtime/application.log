@@ -1,0 +1,261 @@
+2016/03/11 10:50:11 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/indraoctama/Sites/mkmservice/framework/web/CController.php:483
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(270): CController->missingAction('')
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user')
+#3 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mkmservice/moviebay/user
+---
+2016/03/12 13:02:34 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "iptv".' in /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('iptv')
+#1 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mkmservice/iptv
+---
+2016/03/12 13:02:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "moviebay/samsung".' in /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/samsun...')
+#1 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mkmservice/moviebay/samsung
+---
+2016/03/12 13:02:54 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "moviebay/samsung".' in /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/samsun...')
+#1 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mkmservice/moviebay/samsung
+---
+2016/03/12 13:02:57 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "index".' in /Users/indraoctama/Sites/mkmservice/framework/web/CController.php:878
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(782): CController->renderPartial('index', NULL, true)
+#1 /Users/indraoctama/Sites/mkmservice/protected/modules/samsung/controllers/DefaultController.php(7): CController->render('index')
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): DefaultController->actionIndex()
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('')
+#7 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('samsung')
+#8 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#9 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/mkmservice/samsung
+---
+2016/03/16 23:09:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/indraoctama/Sites/mkmservice/framework/web/CController.php:483
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(270): CController->missingAction('')
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user')
+#3 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mkmservice/moviebay/user
+---
+2016/03/16 23:09:51 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "add".' in /Users/indraoctama/Sites/mkmservice/framework/web/CController.php:483
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(270): CController->missingAction('add')
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('add')
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/a...')
+#3 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mkmservice/moviebay/user/add
+---
+2016/03/16 23:09:56 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:285
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/03/16 23:10:01 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:134
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionLogin()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('login')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/l...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/login
+---
+2016/03/26 14:04:41 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "login".' in /Users/indraoctama/Sites/mkmservice/framework/web/CController.php:483
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(270): CController->missingAction('login')
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('login')
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('site/login')
+#3 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mkmservice/index.php/site/login
+---
+2016/04/09 13:00:29 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:38 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:00:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
+2016/04/09 13:59:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "moviebay/jskhdjskf".' in /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/jskhdj...')
+#1 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mkmservice/moviebay/jskhdjskf
+---
+2016/04/09 13:59:13 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "moviebay/jskhdjskf".' in /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/jskhdj...')
+#1 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#2 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/mkmservice/moviebay/jskhdjskf
+---
+2016/04/09 13:59:35 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index".' in /Users/indraoctama/Sites/mkmservice/framework/web/CController.php:483
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(270): CController->missingAction('')
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('')
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user')
+#3 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#4 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/mkmservice/moviebay/user
+---
+2016/04/09 13:59:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'Forbidden.' in /Users/indraoctama/Sites/mkmservice/protected/modules/moviebay/controllers/UserController.php:313
+Stack trace:
+#0 /Users/indraoctama/Sites/mkmservice/framework/web/actions/CInlineAction.php(49): UserController->actionRegister()
+#1 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#2 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#3 /Users/indraoctama/Sites/mkmservice/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#4 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(282): CController->run('register')
+#5 /Users/indraoctama/Sites/mkmservice/framework/web/CWebApplication.php(141): CWebApplication->runController('moviebay/user/r...')
+#6 /Users/indraoctama/Sites/mkmservice/framework/base/CApplication.php(184): CWebApplication->processRequest()
+#7 /Users/indraoctama/Sites/mkmservice/index.php(13): CApplication->run()
+#8 {main}
+REQUEST_URI=/mkmservice/moviebay/user/register
+---
